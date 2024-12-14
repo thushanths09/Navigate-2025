@@ -14,7 +14,7 @@ const Footer = () => {
     </div>
     <hr className="divider" />
     <p className="copyright">
-        © AIESEC in Sri Lanka 2024 <br />
+        © AIESEC in Sri Lanka 2025 <br />
         Created by Navigate 2025 OC
     </p>
     </div>
