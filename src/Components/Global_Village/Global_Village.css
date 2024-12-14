@@ -1,0 +1,99 @@
+
+.Event {
+    margin: 80px auto;
+    width: 90%;
+    align-items: center;
+}
+
+.nav_head{
+    font-size: 40px;
+    color: #fd5c01;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navigate{
+    padding-top: 2%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.images{
+    /* margin-top: 30px auto; */
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.image{
+     flex-basis: 31%;
+}
+
+@media (max-width: 1024px) {
+    .nav_head {
+        font-size: 30px; /* Smaller heading font size */
+    }
+
+    .navigate {
+        font-size: 18px; /* Slightly smaller text size */
+    }
+
+    .images {
+        flex-direction: column; /* Stack images vertically on tablets */
+        align-items: center; /* Center align images */
+        gap: 20px; /* Add some space between images */
+    }
+
+    .image {
+        flex-basis: 80%; /* Images take up more width on smaller screens */
+    }
+}
+
+/* Small screens like mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav_head {
+        font-size: 24px; /* Even smaller font size for mobile */
+    }
+
+    .navigate {
+        font-size: 16px; /* Adjust text size for mobile readability */
+    }
+
+    .images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .image {
+        flex-basis: 90%; /* Images take up almost full width */
+    }
+}
+
+/* Very small screens (extra small devices, like portrait phones) */
+@media (max-width: 480px) {
+    .nav_head {
+        font-size: 20px; /* Reduce font size for very small screens */
+    }
+
+    .navigate {
+        font-size: 14px; /* Even smaller font for small screens */
+    }
+
+    .images {
+        flex-direction: column; /* Keep images stacked on very small screens */
+        gap: 10px;
+    }
+
+    .image {
+        flex-basis: 100%; /* Make images take full width on extra small screens */
+    }
+}

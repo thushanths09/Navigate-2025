@@ -1,0 +1,106 @@
+.footer{
+    background-color: #037ef3;
+}
+
+.foot{
+    background-color: #037ef3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aiesec{
+    /* width: 10%;
+    margin: 20px auto; */
+    padding-left: 50px;
+    margin: 50px auto;
+    width: 20%;
+}
+
+.footer_text{
+    color:rgb(255, 255, 255);
+    margin: 5px auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.divider {
+    margin: 20px auto;
+    align-items: center;
+    border: 0;
+    height: 1px;
+    background: #ffffff; /* White line */
+    width: 80%; /* Adjust width as needed */
+}
+
+.copyright {
+    padding-top: 10px;
+    color: #ffffff;
+    text-align: center; 
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5; 
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .foot {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .aiesec {
+        width: 25%; /* Resize the logo for medium screens */
+        margin-bottom: 20px;
+    }
+
+    .footer_text {
+        padding: 10px 40px; /* Adjust padding */
+        font-size: 16px; /* Smaller text */
+    }
+}
+
+@media (max-width: 768px) {
+    .aiesec {
+        width: 30%; /* Resize for smaller screens */
+    }
+
+    .footer_text {
+        padding: 10px 20px;
+        font-size: 14px; /* Smaller text for compact display */
+    }
+
+    .divider {
+        width: 85%; /* Adjust divider width */
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .foot {
+        padding: 10px 0;
+    }
+
+    .aiesec {
+        width: 40%; /* Resize further for mobile */
+    }
+
+    .footer_text {
+        padding: 10px 15px;
+        font-size: 12px; /* Very compact for small screens */
+    }
+
+    .divider {
+        width: 80%;
+    }
+
+    .copyright {
+        font-size: 10px; /* Compact text */
+        line-height: 1.3;
+    }
+}
