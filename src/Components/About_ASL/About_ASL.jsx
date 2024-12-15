@@ -1,6 +1,6 @@
 import React from 'react'
 import './About_ASL.css'
-import imag1 from '../../assets/background/p.jpg'
+import imag1 from '../../assets/background/ttt.jpg'
 import imag2 from '../../assets/location-icon.png'
 import imag3 from '../../assets/mail-icon.png'
 import imag4 from '../../assets/phone-icon.png'
