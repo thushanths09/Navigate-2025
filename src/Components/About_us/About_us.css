@@ -13,13 +13,26 @@
     position: relative;
 }
 
-.right {
-    flex-basis: 56%;
-}
-
 .imag {
     width: 100%;
     border-radius: 10px;
+    margin-top: 10px; /* Spacing below the heading */
+}
+
+.imag:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds shadow effect */
+}
+.heading-above {
+    font-size: 36px;
+    color: #fd5c01;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Space between heading and image */
+}
+
+.right {
+    flex-basis: 56%;
 }
 
 .right h1 {
@@ -50,11 +63,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.logo-item:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
 }
 
 .ico {
     width: 50px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .logo-item p {
@@ -74,15 +94,20 @@
         flex-basis: 100%;
     }
 
+    .heading-above {
+        font-size: 28px; /* Smaller heading size */
+        margin-bottom: 5px;
+    }
+
     .logos {
         grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
-        gap: 20px; /* Adjust gap for smaller screens */
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .right h1 {
-        font-size: 28px; /* Smaller heading */
+        font-size: 28px;
     }
 
     .right p {
@@ -90,7 +115,7 @@
     }
 
     .ico {
-        width: 40px; /* Smaller icons */
+        width: 40px;
     }
 
     .logo-item p {
@@ -101,7 +126,11 @@
 @media (max-width: 480px) {
     .about_us {
         padding-top: 20px;
-        width: 95%; /* More compact */
+        width: 95%;
+    }
+
+    .heading-above {
+        font-size: 24px; /* Adjust heading size for smaller screens */
     }
 
     .right h1 {
@@ -113,7 +142,7 @@
     }
 
     .logos {
-        gap: 15px; /* Adjust gap for very small screens */
+        gap: 15px;
     }
 
     .ico {

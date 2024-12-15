@@ -1,25 +1,23 @@
-
 .Event {
     margin: 80px auto;
     width: 90%;
     align-items: center;
 }
 
-.nav_head{
+.nav_head {
     font-size: 40px;
     color: #fd5c01;
     text-transform: uppercase;
     text-align: center;
 }
 
-.navigate{
+.navigate {
     padding-top: 2%;
     font-size: 20px;
     text-align: justify;
 }
 
-.gl_images{
-    /* margin-top: 30px auto; */
+.gl_images {
     margin: 80px auto;
     width: 90%;
     display: flex;
@@ -27,73 +25,81 @@
     justify-content: space-between;
 }
 
-.gl_image img{
+.gl_image {
+    flex-basis: 31%;
+    overflow: hidden; /* Prevents the image from spilling out on hover */
+    border-radius: 10px; /* Rounded corners for the images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.gl_image:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds shadow effect */
+}
+
+.gl_image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Initial shadow */
     display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gl_image{
-     flex-basis: 31%;
-}
-
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .nav_head {
-        font-size: 30px; /* Smaller heading font size */
+        font-size: 30px;
     }
 
     .navigate {
-        font-size: 18px; /* Slightly smaller text size */
+        font-size: 18px;
     }
 
-    .images {
-        flex-direction: column; /* Stack images vertically on tablets */
-        align-items: center; /* Center align images */
-        gap: 20px; /* Add some space between images */
+    .gl_images {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .image {
-        flex-basis: 80%; /* Images take up more width on smaller screens */
+    .gl_image {
+        flex-basis: 80%;
     }
 }
 
-/* Small screens like mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
     .nav_head {
-        font-size: 24px; /* Even smaller font size for mobile */
+        font-size: 24px;
     }
 
     .navigate {
-        font-size: 16px; /* Adjust text size for mobile readability */
+        font-size: 16px;
     }
 
-    .images {
-        flex-direction: column; /* Stack images vertically on smaller screens */
+    .gl_images {
+        flex-direction: column;
         gap: 15px;
     }
 
-    .image {
-        flex-basis: 90%; /* Images take up almost full width */
+    .gl_image {
+        flex-basis: 90%;
     }
 }
 
-/* Very small screens (extra small devices, like portrait phones) */
 @media (max-width: 480px) {
     .nav_head {
-        font-size: 20px; /* Reduce font size for very small screens */
+        font-size: 20px;
     }
 
     .navigate {
-        font-size: 14px; /* Even smaller font for small screens */
+        font-size: 14px;
     }
 
-    .images {
-        flex-direction: column; /* Keep images stacked on very small screens */
+    .gl_images {
+        flex-direction: column;
         gap: 10px;
     }
 
-    .image {
-        flex-basis: 100%; /* Make images take full width on extra small screens */
+    .gl_image {
+        flex-basis: 100%;
     }
 }
