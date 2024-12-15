@@ -38,7 +38,15 @@ const Navbar = () => {
         <li>
           <Link to="Contacts" smooth={true} duration={500}>Contact Us</Link>
         </li>
-        <li><button className='btn'><a href='../../Components/TallyForm/TallyForm.html'>Register Now</a></button></li> 
+        <li>         <button className="btn">
+            <a 
+              href="https://github.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Register Now
+            </a>
+          </button></li> 
       </ul>
       <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>
 

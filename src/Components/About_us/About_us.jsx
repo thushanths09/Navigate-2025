@@ -1,10 +1,10 @@
 import React from 'react'
 import './About_us.css'
 import imag1 from '../../assets/background/aiesec.jpg'
-import imag2 from '../../assets/location-icon.png'
-import imag3 from '../../assets/mail-icon.png'
-import imag4 from '../../assets/phone-icon.png'
-import imag5 from '../../assets/play-icon.png'
+import imag2 from '../../assets/world.png'
+import imag3 from '../../assets/members 1.png'
+import imag4 from '../../assets/develop.png'
+import imag5 from '../../assets/experiences.png'
 const About_us = () => {
   return (
     <div className='about_us' id='About_us'>

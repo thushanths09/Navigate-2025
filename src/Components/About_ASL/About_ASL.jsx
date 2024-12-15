@@ -1,10 +1,10 @@
 import React from 'react'
 import './About_ASL.css'
 import imag1 from '../../assets/background/ttt.jpg'
-import imag2 from '../../assets/location-icon.png'
-import imag3 from '../../assets/mail-icon.png'
-import imag4 from '../../assets/phone-icon.png'
-import imag5 from '../../assets/play-icon.png'
+import imag2 from '../../assets/university.png'
+import imag3 from '../../assets/members 2.png'
+import imag4 from '../../assets/social.png'
+import imag5 from '../../assets/expereiences2.png'
 const About_ASL = () => {
   return (
     <div className='about_us'>
