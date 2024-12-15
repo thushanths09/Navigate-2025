@@ -32,7 +32,7 @@ const Navbar = () => {
         <li>
           <Link to="Contacts" smooth={true} duration={500}>Contact Us</Link>
         </li>
-        <li><button className='btn'>Register Now</button></li> 
+        <li><button className='btn'><a href='../../Components/TallyForm/TallyForm.html'>Register Now</a></button></li> 
       </ul>
     </nav>
   )
