@@ -8,7 +8,7 @@ import FAQ from './Components/FAQ/FAQ'
 import About_us from './Components/About_us/About_us'
 import About_ASL from './Components/About_ASL/About_ASL'
 import Global_Village from './Components/Global_Village/Global_Village'
-import Contact_Card from './Components/Contact_Card/Contact_Card'
+import Testimonials from './Components/Testimonials/Testimonials'
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
       <About_ASL/>
       </div>
       <FAQ/>
-      <Contact_Card/>
+      <Testimonials/>
       <Contact/>
       <Footer/>
     </div>

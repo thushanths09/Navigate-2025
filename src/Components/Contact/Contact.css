@@ -21,7 +21,7 @@
 
 .contact-col {
     width: 100%; /* Ensure it spans the full width */
-    max-width: 800px; /* Optional, to limit maximum width */
+    max-width: 1000px; /* Optional, to limit maximum width */
     color: #676767;
 }
 
