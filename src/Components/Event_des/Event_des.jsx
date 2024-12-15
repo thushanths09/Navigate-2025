@@ -5,7 +5,7 @@ import img2 from '../../assets/background/m.jpg'
 import img3 from '../../assets/background/k.jpg'
 const Event_des = () => {
   return (
-    <div className='des'>
+    <div className='des' id="Event_des">
       <div className="Event">
         <h3 className='nav_head'>
           About Navigate 2025

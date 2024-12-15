@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-scroll';  // Import Link from react-scroll
 import './Navbar.css'
 import logo from '../../assets/logos/1.png'
 
@@ -16,15 +17,25 @@ const Navbar = () => {
     <nav className={`${sticky ? 'dark-nav': ''}`}>
       <img src={logo} alt="" className='logo' />
       <ul>
-        <li>Home</li>
-        <li>About Event</li>
-        <li>About Us</li>
-        <li>FAQ</li>
-        <li>Contact Us</li>
+        <li>
+          <Link to="dummy" smooth={true} duration={500}>Home</Link>
+        </li>
+        <li>
+          <Link to="Event_des" smooth={true} duration={500}>About Event</Link>
+        </li>
+        <li>
+          <Link to="About_us" smooth={true} duration={500}>About Us</Link>
+        </li>
+        <li>
+          <Link to="FAQ" smooth={true} duration={500}>FAQ</Link>
+        </li>
+        <li>
+          <Link to="Contacts" smooth={true} duration={500}>Contact Us</Link>
+        </li>
         <li><button className='btn'>Register Now</button></li> 
       </ul>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;

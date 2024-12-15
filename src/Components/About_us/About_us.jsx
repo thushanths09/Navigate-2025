@@ -7,7 +7,7 @@ import imag4 from '../../assets/phone-icon.png'
 import imag5 from '../../assets/play-icon.png'
 const About_us = () => {
   return (
-    <div className='about_us'>
+    <div className='about_us' id='About_us'>
       <div className="left">
         <img src ={imag1} className='imag' alt='' />
       </div>

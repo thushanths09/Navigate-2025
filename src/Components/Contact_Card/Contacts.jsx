@@ -30,7 +30,7 @@ const Contacts = () => {
   ];
 
   return (
-    <div className="contacts">
+    <div className="contacts" id='Contacts'>
       <h2>CONTACT US</h2>
       <div className="contact-cards">
         {contacts.map((contact, index) => (

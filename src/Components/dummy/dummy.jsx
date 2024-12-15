@@ -28,7 +28,7 @@ const Dummy = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container" id="dummy">
       <div className="slider">
         {sliderImages.map((image, index) => (
           <div
