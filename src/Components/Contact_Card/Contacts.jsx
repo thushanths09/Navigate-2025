@@ -1,8 +1,8 @@
 import React from 'react';
 import './Contacts.css';
 import person1 from '../../assets/people/01.jpg';
-import person2 from '../../assets/people/01.jpg';
-import person3 from '../../assets/people/01.jpg';
+import person2 from '../../assets/people/02.jpg';
+import person3 from '../../assets/people/03.jpg';
 
 const Contacts = () => {
   const contacts = [
