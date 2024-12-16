@@ -40,7 +40,7 @@ const Navbar = () => {
         </li>
         <li>         <button className="btn">
             <a 
-              href="https://github.com/" 
+              href="https://tally.so/r/nGoZYj" 
               target="_blank" 
               rel="noopener noreferrer"
             >
