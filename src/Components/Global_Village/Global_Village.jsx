@@ -1,8 +1,8 @@
 import React from 'react'
 import './Global_Village.css'
-import img1 from '../../assets/background/q.jpg'
-import img2 from '../../assets/background/n.jpg'
-import img3 from '../../assets/background/y.jpg'
+import ph1 from '../../assets/background/q.jpg'
+import ph2 from '../../assets/background/n.jpg'
+import ph3 from '../../assets/background/y.jpg'
 const Global_Village = () => {
   return (
     <div className='des'>
@@ -18,13 +18,13 @@ Participants will be able to enjoy various cultural delicacies and performances,
       </div>
       <div className='gl_images'>
         <div className='gl_image'>
-          <img src={img1} alt=""/>
+          <img src={ph1} alt=""/>
         </div>
         <div className='gl_image'>
-          <img src={img2} alt=""/>
+          <img src={ph2} alt=""/>
         </div>
         <div className='gl_image'>
-          <img src={img3} alt=""/>
+          <img src={ph3} alt=""/>
         </div>
       </div>
     </div>
