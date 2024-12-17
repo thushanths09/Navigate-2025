@@ -1,58 +1,59 @@
 /* Main Section */
 .video-slider-section {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  width: 100%;
   margin: 80px auto;
+  width: 80%;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .slider-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 40px;
   color: #fd5c01;
+  text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 /* Slider Container */
 .video-slider {
+  width: 100%;
   margin: 80px auto;
-  width: 90%;
-  padding: 0 80px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider {
+  width: 100%;
   overflow: hidden;
 }
 
 .slider ul {
   display: flex;
-  width: 400%;
-  overflow-x: hidden;
+  width: 400%; /* 100% * 4 items */
   transition: 0.5s;
+  justify-content: center; /* Align videos horizontally */
 }
 
 .slider ul li {
   list-style: none;
-  width: 25%;
-  padding: 20px;
+  width: 25%; /* Each video takes up 25% of the slider width */
+  padding: 10px;
+  min-width: 360px;
 }
 
+/* Video Container */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-basis: 31%; /* Similar to .image class for increased size */
+  width: 100%;
 }
 
 .video-container iframe {
@@ -65,67 +66,62 @@
 }
 
 .video-container:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 1024px) {
-  .video-slider-section {
-    padding: 40px 20px; /* Adjust padding */
-  }
-
-  .slider {
-    padding: 0 40px; /* Adjust padding */
-  }
-
-  .slider ul li {
-    padding: 10px;
-  }
-
   .slider-heading {
-    font-size: 1.8rem;
+    font-size: 30px;
+  }
+
+  .slider ul {
+    flex-direction: column; /* Stack videos vertically on smaller screens */
+    align-items: center;
+    gap: 20px;
   }
 
   .video-container {
-    flex-basis: 80%; /* Adjust the size for smaller screens */
+    flex-basis: 80%; /* Adjust video container size */
   }
 }
 
 @media (max-width: 768px) {
-  .video-slider {
-    padding: 0 20px; /* Adjust padding for smaller screens */
+  .slider-heading {
+    font-size: 24px;
+  }
+
+  .slider ul {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .slider ul li {
-    padding: 10px;
+    width: 70%; /*
   }
 
   .video-container {
-    padding-bottom: 65%; /* Adjust aspect ratio for smaller screens */
-    flex-basis: 90%; /* Adjust for more space */
-  }
-
-  .slider-heading {
-    font-size: 1.6rem;
+    flex-basis: 100%;
   }
 }
 
-@media (max-width: 600px) {
-  .video-slider {
-    margin: 50px auto;
+@media (max-width: 480px) {
+  .slider-heading {
+    font-size: 20px;
+  }
+
+  .slider ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .slider ul li {
-    padding: 5px;
-  }
+  width: 85%; /* Each video takes up 25% of the slider width */
+  min-width: unset;
+}
 
   .video-container {
-    padding-bottom: 70%; /* Adjust aspect ratio for smaller screens */
-    flex-basis: 100%; /* Full width on mobile */
-  }
-
-  .slider-heading {
-    font-size: 1.5rem;
+    flex-basis: 100%; /* Videos take full width on mobile */
   }
 }
