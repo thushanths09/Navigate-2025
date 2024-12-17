@@ -1,6 +1,6 @@
 import React from 'react'
 import './Global_Village.css'
-import img1 from '../../assets/background/l.jpg'
+import img1 from '../../assets/background/q.jpg'
 import img2 from '../../assets/background/n.jpg'
 import img3 from '../../assets/background/y.jpg'
 const Global_Village = () => {
