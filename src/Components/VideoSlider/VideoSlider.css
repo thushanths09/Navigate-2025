@@ -1,0 +1,114 @@
+/* Main Section */
+.event-highlights {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  width: 90%; /* Match the width of .Event */
+  margin: 80px auto; /* Center the section */
+}
+
+/* Heading */
+.event-highlights h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fd5c01;
+  text-align: center;
+  margin: 0 auto; /* Ensure the heading is centered */
+}
+
+/* Slider Container */
+.testimonials {
+  margin: 80px auto;
+  width: 90%; /* Match the width of .Event */
+  padding: 0 80px;
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 400%;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.slider ul li {
+  list-style: none;
+  width: 25%;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-container:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .event-highlights {
+    padding: 40px 20px; /* Adjust padding */
+  }
+
+  .testimonials {
+    padding: 0 40px; /* Adjust padding */
+  }
+
+  .slider ul li {
+    padding: 10px;
+  }
+
+  .event-highlights h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .testimonials {
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+
+  .slider ul li {
+    padding: 10px;
+  }
+
+  .event-highlights h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials {
+    margin: 50px auto;
+  }
+
+  .video-container {
+    padding-bottom: 65%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .event-highlights h2 {
+    font-size: 1.5rem;
+  }
+}
+

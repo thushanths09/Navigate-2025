@@ -10,7 +10,7 @@ import About_us from './Components/About_us/About_us';
 import About_ASL from './Components/About_ASL/About_ASL';
 import Global_Village from './Components/Global_Village/Global_Village';
 import Contacts from './Components/Contact_Card/Contacts';
-// import Slider from './Components/Slider/Slider';
+import VideoSlider from './Components/VideoSlider/VideoSlider';
 
 const App = () => {
   return (
@@ -24,10 +24,10 @@ const App = () => {
         <About_ASL />
       </div>
       <FAQ />
+      <VideoSlider />
       <Contacts />
       <Contact />
       <Footer />
-      {/* <Slider /> Added Slider component here */}
     </div>
   );
 }
