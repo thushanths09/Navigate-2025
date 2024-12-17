@@ -1,25 +1,28 @@
 /* Main Section */
-.event-highlights {
+.video-slider-section {
   text-align: center;
   padding: 50px 20px;
   background-color: #f9f9f9;
-  width: 90%; /* Match the width of .Event */
-  margin: 80px auto; /* Center the section */
+  width: 100%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Heading */
-.event-highlights h2 {
+.slider-heading {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #fd5c01;
   text-align: center;
-  margin: 0 auto; /* Ensure the heading is centered */
+  margin: 0 auto;
 }
 
 /* Slider Container */
-.testimonials {
+.video-slider {
   margin: 80px auto;
-  width: 90%; /* Match the width of .Event */
+  width: 90%;
   padding: 0 80px;
   position: relative;
 }
@@ -49,6 +52,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-basis: 31%; /* Similar to .image class for increased size */
 }
 
 .video-container iframe {
@@ -62,16 +66,16 @@
 
 .video-container:hover {
   transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-  .event-highlights {
+  .video-slider-section {
     padding: 40px 20px; /* Adjust padding */
   }
 
-  .testimonials {
+  .slider {
     padding: 0 40px; /* Adjust padding */
   }
 
@@ -79,13 +83,17 @@
     padding: 10px;
   }
 
-  .event-highlights h2 {
+  .slider-heading {
     font-size: 1.8rem;
+  }
+
+  .video-container {
+    flex-basis: 80%; /* Adjust the size for smaller screens */
   }
 }
 
-@media (max-width: 800px) {
-  .testimonials {
+@media (max-width: 768px) {
+  .video-slider {
     padding: 0 20px; /* Adjust padding for smaller screens */
   }
 
@@ -93,22 +101,31 @@
     padding: 10px;
   }
 
-  .event-highlights h2 {
+  .video-container {
+    padding-bottom: 65%; /* Adjust aspect ratio for smaller screens */
+    flex-basis: 90%; /* Adjust for more space */
+  }
+
+  .slider-heading {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width: 600px) {
-  .testimonials {
+  .video-slider {
     margin: 50px auto;
   }
 
-  .video-container {
-    padding-bottom: 65%; /* Adjust aspect ratio for smaller screens */
+  .slider ul li {
+    padding: 5px;
   }
 
-  .event-highlights h2 {
+  .video-container {
+    padding-bottom: 70%; /* Adjust aspect ratio for smaller screens */
+    flex-basis: 100%; /* Full width on mobile */
+  }
+
+  .slider-heading {
     font-size: 1.5rem;
   }
 }
-
