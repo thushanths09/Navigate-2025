@@ -1,8 +1,8 @@
 import React from 'react'
 import './Global_Village.css'
-import ph1 from '../../assets/background/q.jpg'
-import ph2 from '../../assets/background/n.jpg'
-import ph3 from '../../assets/background/y.jpg'
+import ph1 from '../../assets/background/t.jpg'
+import ph2 from '../../assets/background/m.jpg'
+import ph3 from '../../assets/background/k.jpg'
 const Global_Village = () => {
   return (
     <div className='des'>
