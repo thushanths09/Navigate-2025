@@ -1,153 +1,116 @@
-/* Add a background color to the container */
+/* Slider Container */
 .slider-container {
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden; /* Hide the overflowing images */
-    position: relative;
-    background-color: rgba(0, 174, 183, 0.4); /* Background color */
-  }
-  
-  /* The slider to contain images */
-  .slider {
-    display: flex;
-    width: 100%;
-    position: relative; /* Ensure images stay within the container */
-  }
-  
-  /* Each slider item (image) */
-  .slider-item {
-    position: absolute; /* Ensure images are stacked on top of each other */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    flex: 0 0 100%; /* Ensure each item takes up 100% width */
-    height: 100vh; /* Full screen height */
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Set initial opacity to 0 */
-    transform: scale(1.2); /* Start with a zoomed-in effect */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade and zoom transition */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Make the current image visible and zoom out */
-  .slider-item.active {
-    opacity: 1; /* Show the active image */
-    transform: scale(1); /* Zoom out to normal size */
-  }
-  
-  /* Gradient Overlay Styling */
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 174, 183, 0.4), rgba(0, 174, 183, 0.4)); /* Gradient color */
-  }
-  
-  /* Text styling */
-  .dummy_head {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 100px;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Enhances text readability */
-  }
-  
-  /* Style for dot navigation */
-  .dot-navigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dot:hover {
-    background-
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 174, 183, 0.4);
 }
 
-/* Media Queries for Responsiveness */
+/* Slider Wrapper */
+.slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
 
-/* Medium screens like tablets (min-width: 768px) */
+/* Slider Items */
+.slider-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex: 0 0 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Gradient Overlay */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 174, 183, 0.4), rgba(0, 174, 183, 0.4));
+}
+
+/* Heading */
+.dummy_head {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 100px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Dot Navigation */
+.dot-navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
-  .slider-item {
-    height: 80vh; /* Reduce the height of images for tablet screens */
-  }
-
   .dummy_head {
-    font-size: 60px; /* Reduce the font size */
+    font-size: 60px;
   }
-
-  .dot-navigation {
-    bottom: 15px;
-  }
-
-
-/* Media Queries for Responsiveness */
-
-/* Medium screens like tablets (min-width: 768px) */
-@media (max-width: 1024px) {
-  .dummy_head {
-    font-size: 60px; /* Reduce the font size for medium screens */
-  }
-
   .dot {
     width: 10px;
     height: 10px;
   }
-
-  .dot-navigation {
-    bottom: 10px;
-  }
 }
 
-/* Small screens like mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   .dummy_head {
-    font-size: 40px; /* Reduce font size even further for smaller screens */
+    font-size: 40px;
   }
-
   .dot {
     width: 8px;
     height: 8px;
   }
-
-  .dot-navigation {
-    bottom: 5px;
-  }
 }
 
-/* Very small screens (extra small devices, like portrait phones) */
 @media (max-width: 480px) {
   .dummy_head {
-    font-size: 30px; /* Even smaller font size for very small screens */
+    font-size: 30px;
   }
-
   .dot {
     width: 6px;
     height: 6px;
-  }
-
-  .dot-navigation {
-    bottom: 5px;
   }
 }
