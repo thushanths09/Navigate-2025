@@ -1,9 +1,9 @@
 .footer{
-    background-color: #037ef3;
+    background-color: rgba(0, 174, 183);
 }
 
 .foot{
-    background-color: #037ef3;
+    background-color:rgba(0, 174, 183);
     display: flex;
     align-items: center;
     justify-content: space-between;
