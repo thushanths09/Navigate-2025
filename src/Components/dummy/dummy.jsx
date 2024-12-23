@@ -13,7 +13,7 @@ const Dummy = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
-    }, 5000); // Change every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, [sliderImages.length]);
 
