@@ -100,5 +100,6 @@
 
     .image {
         flex-basis: 100%;
+        width: 50%;
     }
 }
