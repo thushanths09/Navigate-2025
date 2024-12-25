@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import './Navbar.css';
 import logo from '../../assets/logos/1.png';
 import menu_icon from '../../assets/menu-icon.png';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   // Add event listener to track scroll position and update sticky state
   useEffect(() => {
@@ -17,30 +18,41 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const [mobileMenu, setMobileMenu] = useState(false); // State for mobile menu visibility
-
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu); // Toggle the mobile menu visibility
   };
 
   return (
-    <nav className={`${sticky ? 'dark-nav' : ''}`}> {/* Apply sticky class if scroll threshold is met */}
-      <img src={logo} alt="" className="logo" /> {/* Logo section */}
-      <ul className={mobileMenu ? 'dropdown-mobile-menu' : 'hide-mobile-menu'}> {/* Show or hide menu */}
+    <nav className={`${sticky ? 'dark-nav' : ''}`}>
+      {/* Logo section */}
+      <img src={logo} alt="Logo" className="logo" />
+
+      {/* Mobile menu dropdown */}
+      <ul className={mobileMenu ? 'dropdown-mobile-menu' : 'hide-mobile-menu'}>
         <li>
-          <Link to="dummy" smooth={true} duration={500}>Home</Link> {/* Smooth scroll to "Home" section */}
+          <Link to="dummy" smooth={true} duration={500}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="Event_des" smooth={true} duration={500}>About Event</Link> {/* Smooth scroll to "About Event" section */}
+          <Link to="Event_des" smooth={true} duration={500}>
+            About Event
+          </Link>
         </li>
         <li>
-          <Link to="About_us" smooth={true} duration={500}>About Us</Link> {/* Smooth scroll to "About Us" section */}
+          <Link to="About_us" smooth={true} duration={500}>
+            About Us
+          </Link>
         </li>
         <li>
-          <Link to="FAQ" smooth={true} duration={500}>FAQ</Link> {/* Smooth scroll to "FAQ" section */}
+          <Link to="FAQ" smooth={true} duration={500}>
+            FAQ
+          </Link>
         </li>
         <li>
-          <Link to="Contacts" smooth={true} duration={500}>Contact Us</Link> {/* Smooth scroll to "Contact Us" section */}
+          <Link to="Contacts" smooth={true} duration={500}>
+            Contact Us
+          </Link>
         </li>
         <li>
           <button className="btn">
@@ -54,7 +66,14 @@ const Navbar = () => {
           </button>
         </li>
       </ul>
-      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} /> {/* Menu icon for mobile view */}
+
+      {/* Menu icon */}
+      <img
+        src={menu_icon}
+        alt="Menu Icon"
+        className={`menu-icon ${mobileMenu ? 'close' : ''}`}
+        onClick={toggleMenu}
+      />
     </nav>
   );
 };
