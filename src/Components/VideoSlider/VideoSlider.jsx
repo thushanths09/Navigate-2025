@@ -20,7 +20,7 @@ const VideoSlider = () => {
   };
 
   return (
-    <div className="video-slider-section">
+    <div className="video-slider-section container">
       <h2 className="slider-heading">Past Event Highlights</h2> {/* Add a heading here */}
       <div className="video-slider">
 

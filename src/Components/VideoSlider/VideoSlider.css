@@ -1,7 +1,7 @@
 /* Main Section */
 .video-slider-section {
   margin: 80px auto;
-  width: 80%;
+  width: 90%; /* Match the width of .Event and .images */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -18,8 +18,8 @@
 
 /* Slider Container */
 .video-slider {
-  width: 100%;
-  margin: 80px auto;
+  width: 90%;
+  margin: 40px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,16 +32,16 @@
 
 .slider ul {
   display: flex;
-  width: 400%; /* 100% * 4 items */
-  transition: 0.5s;
-  justify-content: center; /* Align videos horizontally */
+  flex-wrap: wrap; /* Allow items to wrap into 2 rows */
+  width: 100%; /* Match container width */
+  justify-content: space-between; /* Space between videos */
+  gap: 20px; /* Add spacing between items */
 }
 
 .slider ul li {
   list-style: none;
-  width: 25%; /* Each video takes up 25% of the slider width */
-  padding: 10px;
-  min-width: 360px;
+  width: 45%; /* Adjust width for 2 videos per row */
+  margin-bottom: 20px; /* Add spacing between rows */
 }
 
 /* Video Container */
@@ -77,13 +77,12 @@
   }
 
   .slider ul {
-    flex-direction: column; /* Stack videos vertically on smaller screens */
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
   }
 
-  .video-container {
-    flex-basis: 80%; /* Adjust video container size */
+  .slider ul li {
+    width: 80%; /* Adjust width for smaller screens */
   }
 }
 
@@ -98,11 +97,7 @@
   }
 
   .slider ul li {
-    width: 70%; /*
-  }
-
-  .video-container {
-    flex-basis: 100%;
+    width: 90%;
   }
 }
 
@@ -111,17 +106,7 @@
     font-size: 20px;
   }
 
-  .slider ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .slider ul li {
-  width: 85%; /* Each video takes up 25% of the slider width */
-  min-width: unset;
-}
-
-  .video-container {
-    flex-basis: 100%; /* Videos take full width on mobile */
+    width: 100%; /* Full width on mobile */
   }
 }
