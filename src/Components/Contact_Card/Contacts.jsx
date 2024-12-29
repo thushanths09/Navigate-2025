@@ -49,6 +49,17 @@ const Contacts = () => {
           </div>
         ))}
       </div>
+      <div className='button'> 
+          <button className="btn1">
+            <a
+              href="https://tally.so/r/nGoZYj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              REGISTER NOW
+            </a>
+          </button>
+      </div>
     </div>
   );
 };

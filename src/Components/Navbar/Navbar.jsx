@@ -54,7 +54,7 @@ const Navbar = () => {
             Contact Us
           </Link>
         </li>
-        <li className='btns'>
+        <li>
           <button className="btn">
             <a
               href="https://tally.so/r/nGoZYj"
