@@ -44,7 +44,8 @@ const Dummy = () => {
         ))}
       </div>
       <div className="dummy_head">
-        <h1>NAVIGATE 2025</h1>
+        <h1 className="main-title">NAVIGATE</h1>
+        <p className="quote">Redefine Your Story</p>
       </div>
     </div>
   );
