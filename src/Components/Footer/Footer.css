@@ -37,6 +37,7 @@
 
 .copyright {
     padding-top: 10px;
+    padding-bottom: 10px;
     color: #ffffff;
     text-align: center; 
     font-size: 16px;
@@ -52,7 +53,7 @@
     }
 
     .aiesec {
-        width: 25%; /* Resize the logo for medium screens */
+        width: 60%; /* Resize the logo for medium screens */
         margin-bottom: 20px;
     }
 
@@ -60,11 +61,16 @@
         padding: 10px 40px; /* Adjust padding */
         font-size: 16px; /* Smaller text */
     }
+
+    .copyright {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 @media (max-width: 768px) {
     .aiesec {
-        width: 30%; /* Resize for smaller screens */
+        width: 65%; /* Resize for smaller screens */
     }
 
     .footer_text {
@@ -78,6 +84,8 @@
 
     .copyright {
         font-size: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -87,7 +95,7 @@
     }
 
     .aiesec {
-        width: 40%; /* Resize further for mobile */
+        width: 70%; /* Resize further for mobile */
     }
 
     .footer_text {
@@ -102,5 +110,7 @@
     .copyright {
         font-size: 10px; /* Compact text */
         line-height: 1.3;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
