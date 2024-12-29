@@ -113,6 +113,15 @@
 }
 
 @media (max-width: 480px) {
+  .slider-container{
+    height: 50vh;
+  }
+  .slider-item{
+    height: 50vh;
+  }
+  .dot-navigation{
+    height: 50vh;
+  }
   .dummy_head {
     font-size: 30px;
   }
