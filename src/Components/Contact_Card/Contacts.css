@@ -106,4 +106,8 @@
     width: 90%;
     height: auto; /* Allow card to adjust height automatically on small screens */
   }
+
+  .btn1{
+    font-size: 24px;
+  }
 }
