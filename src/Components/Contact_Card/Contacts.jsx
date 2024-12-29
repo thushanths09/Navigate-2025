@@ -39,8 +39,12 @@ const Contacts = () => {
             <div className="contact-details">
               <h3>{contact.name}</h3>
               <p className="contact-position">{contact.position}</p>
-              <p className="contact-email">📧 {contact.email}</p>
-              <p className="contact-phone">📞 {contact.phone}</p>
+              <p className="contact-email">
+                📧 <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              </p>
+              <p className="contact-phone">
+                📞 <a href={`tel:${contact.phone.replace(/\s+/g, '')}`}>{contact.phone}</a>
+              </p>
             </div>
           </div>
         ))}
