@@ -70,7 +70,7 @@ nav ul li a.active-link {
 }
 
 .menu-icon.close {
-    transform: rotate(180deg); /* Rotate for close effect */
+    transform: rotate(90deg); /* Rotate for close effect */
 }
 
 @media (max-width: 1000px) {
