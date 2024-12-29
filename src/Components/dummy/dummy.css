@@ -1,7 +1,7 @@
 /* Slider Container */
 .slider-container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* Ensure the container is always the height of the viewport */
   overflow: hidden;
   position: relative;
   background-color: rgba(0, 174, 183, 0.4);
@@ -10,136 +10,21 @@
 /* Slider Wrapper */
 .slider {
   display: flex;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the slider wrapper takes the full container height */
+  transition: transform 1s ease-in-out;
 }
 
 /* Slider Items */
 .slider-item {
   position: absolute;
-  top: 0;/* Slider Container */
-  .slider-container {
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(0, 174, 183, 0.4);
-  }
-  
-  /* Slider Wrapper */
-  .slider {
-    display: flex;
-    width: 100%;
-    position: relative;
-  }
-  
-  /* Slider Items */
-  .slider-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    flex: 0 0 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transform: scale(1.2);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Active Slider Item */
-  .slider-item.active {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  /* Gradient Overlay */
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0, 174, 183, 0.4), rgba(0, 174, 183, 0.4));
-  }
-  
-  /* Heading */
-  .dummy_head {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 100px;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Dot Navigation */
-  .dot-navigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dot.active {
-    background-color: rgba(255, 255, 255, 1);
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    .dummy_head {
-      font-size: 60px;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .dummy_head {
-      font-size: 40px;
-    }
-    .dot {
-      width: 8px;
-      height: 8px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .dummy_head {
-      font-size: 30px;
-    }
-    .dot {
-      width: 6px;
-      height: 6px;
-    }
-  }
-  
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   flex: 0 0 100%;
-  height: 100vh;
+  height: 100vh; /* Ensure each image fills the viewport height */
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -148,11 +33,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1; /* Initially place images behind the heading */
 }
 
+/* Active Slider Item */
 .slider-item.active {
   opacity: 1;
   transform: scale(1);
+  z-index: 1; /* Bring active image to the front */
 }
 
 /* Gradient Overlay */
@@ -176,16 +64,18 @@
   font-weight: 600;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Ensure heading stays on top of the images */
 }
 
 /* Dot Navigation */
 .dot-navigation {
-  position: absolute;
+  position: fixed; /* Fixed at the bottom of the viewport */
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 2; /* Ensure dots are above the images */
 }
 
 .dot {
