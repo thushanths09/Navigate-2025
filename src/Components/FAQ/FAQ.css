@@ -57,7 +57,7 @@
 }
 
 .faq-item.open .faq-icon {
-  transform: rotate(180deg); /* Rotate the arrow for open state */
+  transform: rotate(90deg); /* Rotate the arrow for open state */
 }
 
 .faq-answer {
