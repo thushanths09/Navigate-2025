@@ -45,7 +45,7 @@ const Dummy = () => {
       </div>
       <div className="dummy_head">
         <h1 className="main-title">NAVIGATE</h1>
-        <p className="quote">Redefine Your Story</p>
+        <p className="quote">To Redefine Your Story</p>
       </div>
     </div>
   );
